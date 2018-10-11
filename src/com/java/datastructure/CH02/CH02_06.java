@@ -11,6 +11,22 @@ public class CH02_06 {
     public CH02_06() {
     }
 
+    public int[] getArr() {
+        return arr;
+    }
+
+    public void setArr(int[] arr) {
+        this.arr = arr;
+    }
+
+    public int getArraySize() {
+        return arraySize;
+    }
+
+    public void setArraySize(int arraySize) {
+        this.arraySize = arraySize;
+    }
+
     public void initAndTransformWithoutZero(int[][] original) throws Exception {
         validateOriginalArray(original);
 
@@ -43,29 +59,13 @@ public class CH02_06 {
         int index = getArraySize() * i - i * (i + 1) / 2 + j;
         return getArr()[index];
     }
-    
-    public int[] getArr() {
-        return arr;
-    }
 
-    public void setArr(int[] arr) {
-        this.arr = arr;
-    }
-
-    public int getArraySize() {
-        return arraySize;
-    }
-
-    public void setArraySize(int arraySize) {
-        this.arraySize = arraySize;
-    }
-    
     private void validateOriginalArray(int[][] original) throws Exception {
         if (original == null || original.length == 0) {
             throw new Exception("Empty array");
         }
         int length = original.length;
-        for (int i = 0 ; i < length; i++) {
+        for (int i = 0; i < length; i++) {
             int[] temp = original[i];
             if (temp == null || temp.length != length) {
                 throw new Exception("Element in row " + (i + 1) + " is invalid");
