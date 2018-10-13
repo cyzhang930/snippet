@@ -16,7 +16,7 @@ public class LinkedList {
         }
         System.out.println();
     }
-    
+
     public void insert(int data, String name, int np) {
         Node newNode = new Node(data, name, np);
         if (this.isEmpty()) {
@@ -27,6 +27,27 @@ public class LinkedList {
             last = newNode;
         }
     }
+    
+    public String getNameInNode(Node node) {
+        return node.getName();
+    }
+
+    public Node getFirst() {
+        return first;
+    }
+
+    public void setFirst(Node first) {
+        this.first = first;
+    }
+
+    public Node getLast() {
+        return last;
+    }
+
+    public void setLast(Node last) {
+        this.last = last;
+    }
+
 }
 
 class Node {
@@ -57,7 +78,7 @@ class Node {
     public Node getNext() {
         return this.next;
     }
-    
+
     public void setNext(Node next) {
         this.next = next;
     }
