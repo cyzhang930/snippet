@@ -51,6 +51,10 @@ public class StuLinkedList {
         }
         
     }
+    
+    public String getFirstName() {
+        return first.getNames();
+    }
 }
 
 class StuNode {
